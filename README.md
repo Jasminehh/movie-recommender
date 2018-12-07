@@ -26,6 +26,7 @@ Genres were were listed as a blend of multiple genres as shown here:
 For the purpose of this visualization, genres were counted individually each time they were mentioned. No blended genres are included.
 
 **Figure 2. Frequency of Genres**
+
 ![](image/genre_histogram.png)
 
 Finally, we found variability in ratings (see Figure 3), such that people tended to rate films over positively, overall.
@@ -69,13 +70,11 @@ Two most common types of recommendation systems are Content-Based and Collaborat
 ### Collaborative Filtering
 
 - Memory-based models are based on similarity between items or users, where we use cosine-similarity.
-- Model-based model is based on matrix factorization where we use SVD to factorize the matrix.
+- Model-based model is based on matrix factorization where we use NMF to factorize the matrix.
 
 #### Model Strategy 1: Memory-Based Collaborative Filtering - Cosine Similarity
 - User-Item Collaborative Filtering: “Users who are similar to you also liked …”
 - Item-Item Collaborative Filtering: “Users who liked this item also liked …”
-
-A distance metric commonly used in recommendation systems is cosine similarity, where the ratings are seen as vectors in n-dimensional space and the similarity is calculated based on the angle between these vectors.
 
 
 #### Step 1: Create the user-item matrices for both testing and training data.
@@ -127,8 +126,7 @@ User-based CF RMSE: 3.09
 - Apply stochastic gradient descent to reduce RMSE.
 - Use regularization terms to prevent overfitting. -->
 
-
-##### NMF
+**Figure 3. Elbow Plot of RMSE values for NFM Tuning**
 
 ![](image/nmf-rmse.png)
 
